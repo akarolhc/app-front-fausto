@@ -65,28 +65,6 @@ const medicamentos = [
     imagem: paracetamol,
     dosagem: "500mg",
     href: "/Buscopan",
-  },
-  {
-    id: 8,
-    nome: "Omeprazol",
-    imagem: paracetamol,
-    dosagem: "500mg",
-    href: "/Omeprazol",
-  },
-  {
-    id: 9,
-    nome: "Ranitidina",
-    imagem: paracetamol,
-    dosagem: "500mg",
-    href: "/Ranitidina",
-  },
-  {
-    id: 10,
-    nome: "Dorflex",
-    imagem: paracetamol,
-    dosagem: "500mg",
-    id: 11,
-    href: "/Dorflex",
   }
 ];
 
@@ -126,7 +104,6 @@ export default function PaginaInicial() {
 
   return (
     <div className="paginaInicial">
-      <Navbar />
       <div className="buttons conteudo">
         <Button variant="light" className="button-nav">
           <div className="icon">

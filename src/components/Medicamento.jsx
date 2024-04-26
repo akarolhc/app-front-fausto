@@ -4,7 +4,6 @@ export default function Medicamento(props) {
     return (
         <div className="medicamento">
             <div className="conteudo-medicamento" key={props.nome}>
-
                 <div className="img"><img src={props.img} alt={props.nome} /></div>
                 <div className="container-descricao">
                     <h1>{props.nome}</h1>

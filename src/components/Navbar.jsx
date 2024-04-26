@@ -3,6 +3,7 @@ import "../styles/Navbar.css";
 import pills from "../assets/pills.png";
 import medtec from "../assets/MedTec.png";
 import SearchIcon from "@mui/icons-material/Search";
+import Dropdown from 'react-bootstrap/Dropdown';
 
 export default function Navbar() {
     return (
@@ -16,7 +17,21 @@ export default function Navbar() {
                     <a href="/">Home</a>
                 </li>
                 <li>
-                    <a href="/medicamentos">Medicamentos</a>
+                    <Dropdown>
+                        <Dropdown.Toggle className="dropdown-button" id="dropdown-basic">
+                            <a>Dropdown Button</a>
+                        </Dropdown.Toggle>
+
+                        <Dropdown.Menu>
+                            <Dropdown.Item href="/Paracetamol">Paracetamol</Dropdown.Item>
+                            <Dropdown.Item href="/Dipirona">Dipirona</Dropdown.Item>
+                            <Dropdown.Item href="/Ibuprofeno">Ibuprofeno</Dropdown.Item>
+                            <Dropdown.Item href="/Dorflex">Dorflex</Dropdown.Item>
+                            <Dropdown.Item href="/Doril">Doril</Dropdown.Item>
+                            <Dropdown.Item href="/Novalgina">Novalgina</Dropdown.Item>
+                            <Dropdown.Item href="/Buscopan">Buscopan</Dropdown.Item>
+                        </Dropdown.Menu>
+                    </Dropdown>
                 </li>
                 <li>
                     <a href="/agendamento">Agendamento</a>
