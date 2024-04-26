@@ -9,3 +9,25 @@
     padding: 10px;
     margin: 10px;
 }
+
+.card_medicamento:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
+.slide{
+    animation: slide 1s infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

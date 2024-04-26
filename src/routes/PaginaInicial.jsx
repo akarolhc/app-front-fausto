@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import "../styles/PaginaInicial.css";
 import CardFarmacia from "../components/CardFarmacia";
 import catarinense from "../assets/catarinense.png";
@@ -14,59 +15,70 @@ import AddIcon from "@mui/icons-material/Add";
 import AutoAwesomeMotionIcon from "@mui/icons-material/AutoAwesomeMotion";
 import paracetamol from "../assets/paracetamol.png";
 import CardMedicamento from "../components/CardMedicamento";
-
+import Navbar from "../components/Navbar";
 const medicamentos = [
   {
+    id: 1,
     nome: "Paracetamol",
     imagem: paracetamol,
     dosagem: "500mg",
   },
   {
+    id: 2,
     nome: "Dipirona",
     imagem: paracetamol,
     dosagem: "500mg",
   },
   {
+    id: 3,
     nome: "Ibuprofeno",
     imagem: paracetamol,
     dosagem: "500mg",
   },
   {
+    id: 4,
     nome: "Dorflex",
     imagem: paracetamol,
     dosagem: "500mg",
   },
   {
+    id: 5,
     nome: "Doril",
     imagem: paracetamol,
     dosagem: "500mg",
   },
   {
+    id: 6,
     nome: "Novalgina",
     imagem: paracetamol,
     dosagem: "500mg",
   },
   {
+    id: 7,
     nome: "Buscopan",
     imagem: paracetamol,
     dosagem: "500mg",
   },
   {
+    id: 8,
     nome: "Omeprazol",
     imagem: paracetamol,
     dosagem: "500mg",
   },
   {
+    id: 9,
     nome: "Ranitidina",
     imagem: paracetamol,
     dosagem: "500mg",
   },
   {
+    id: 10,
     nome: "Dorflex",
     imagem: paracetamol,
     dosagem: "500mg",
   },
   {
+    id: 11,
     nome: "Doril",
     imagem: paracetamol,
     dosagem: "500mg",
@@ -74,8 +86,42 @@ const medicamentos = [
 ];
 
 export default function PaginaInicial() {
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [animating, setAnimating] = useState(false);
+
+  const goToNextSlide = () => {
+    if (currentSlide < medicamentos.length - 2) {
+      setCurrentSlide(currentSlide + 1);
+    }
+
+    setAnimating(true);
+
+    setTimeout(() => {
+      setAnimating(false);
+    }
+    , 500);
+
+  }
+
+  const goToPrevSlide = () => {
+    if (currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
+    }
+
+    setAnimating(true);
+
+    setTimeout(() => {
+      setAnimating(false);
+    }
+    , 500);
+  }
+  
+
+
   return (
     <div className="paginaInicial">
+      <Navbar />
       <div className="buttons conteudo">
         <Button variant="light" className="button-nav">
           <div className="icon">
@@ -141,23 +187,27 @@ export default function PaginaInicial() {
             <Button
               variant="light"
               style={{ background: "var(--secundary-color)" }}
+              onClick={goToPrevSlide}
             >
               <ChevronLeftIcon style={{ color: "var(--primary-color)" }} />
             </Button>
           </div>
           <div className="medicamentos">
-            {medicamentos.map((medicamento) => (
+            {medicamentos.slice(currentSlide, currentSlide + 4).map((medicamento) => (
               <CardMedicamento
-                imagem={medicamento.imagem}
+                key={medicamento.id}
                 nome={medicamento.nome}
+                imagem={medicamento.imagem}
                 dosagem={medicamento.dosagem}
+                className={`card_medicamento ${animating ? "animating" : ""}`}
               />
             ))}
           </div>
           <div className="button-left">
             <Button
               variant="light"
-              style={{ background: "var(--secundary-color)" }}
+              style={{ background: "var(--secundary-color)"}}
+              onClick={goToNextSlide}
             >
               <ChevronRightIcon style={{ color: "var(--primary-color)" }} />
             </Button>
