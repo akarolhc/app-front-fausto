@@ -20,56 +20,61 @@ const medicamentos = [
     nome: "Paracetamol",
     imagem: paracetamol,
     dosagem: "500mg",
+    href: "/Paracetamol",
   },
   {
     nome: "Dipirona",
     imagem: paracetamol,
     dosagem: "500mg",
+    href: "/Dipirona",
   },
   {
     nome: "Ibuprofeno",
     imagem: paracetamol,
     dosagem: "500mg",
+    href: "/Ibuprofeno",
   },
   {
     nome: "Dorflex",
     imagem: paracetamol,
     dosagem: "500mg",
+    href: "/Dorflex",
   },
   {
     nome: "Doril",
     imagem: paracetamol,
     dosagem: "500mg",
+    href: "/Doril",
   },
   {
     nome: "Novalgina",
     imagem: paracetamol,
     dosagem: "500mg",
+    href: "/Novalgina",
   },
   {
     nome: "Buscopan",
     imagem: paracetamol,
     dosagem: "500mg",
+    href: "/Buscopan",
   },
   {
     nome: "Omeprazol",
     imagem: paracetamol,
     dosagem: "500mg",
+    href: "/Omeprazol",
   },
   {
     nome: "Ranitidina",
     imagem: paracetamol,
     dosagem: "500mg",
+    href: "/Ranitidina",
   },
   {
     nome: "Dorflex",
     imagem: paracetamol,
     dosagem: "500mg",
-  },
-  {
-    nome: "Doril",
-    imagem: paracetamol,
-    dosagem: "500mg",
+    href: "/Dorflex",
   }
 ];
 
@@ -151,6 +156,7 @@ export default function PaginaInicial() {
                 imagem={medicamento.imagem}
                 nome={medicamento.nome}
                 dosagem={medicamento.dosagem}
+                href={medicamento.href}
               />
             ))}
           </div>
