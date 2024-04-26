@@ -3,7 +3,8 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 5rem;
+  padding: 5rem;
+  overflow: hidden;
 }
 
 .conteudo h1 {
@@ -80,8 +81,30 @@ span {
   justify-content: center;
   align-items: center;
   width: 100%;
-  overflow: hidden;
   color: #858585;
   font: 700 1.5rem "Roboto", sans-serif;
   font-size: 13px;
+  transition: 0.3s;
+  animation: fadeIn 1s;
+  opacity: 1;
+}
+
+.button-right, .button-left {
+  z-index: 1;
+}
+
+.animating {
+  animation: slide 1s infinite;
+}
+
+@keyframes slide {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
