@@ -15,73 +15,64 @@ import AddIcon from "@mui/icons-material/Add";
 import AutoAwesomeMotionIcon from "@mui/icons-material/AutoAwesomeMotion";
 import paracetamol from "../assets/paracetamol.png";
 import CardMedicamento from "../components/CardMedicamento";
-import Navbar from "../components/Navbar";
+
+import dipirona from "../assets/medicamentos/Dipirona.jpg";
+import ibuprofeno from "../assets/medicamentos/Ibuprofeno.png";
+import dorflex from "../assets/medicamentos/Dorflex.jpg";
+import doril from "../assets/medicamentos/Doril.jpg";
+import novalgina from "../assets/medicamentos/Novalgina.png";
+import buscopan from "../assets/medicamentos/Buscopan.jpg";
+
+
 const medicamentos = [
   {
     id: 1,
     nome: "Paracetamol",
     imagem: paracetamol,
     dosagem: "500mg",
+    href: "/Paracetamol",
   },
   {
     id: 2,
     nome: "Dipirona",
-    imagem: paracetamol,
+    imagem: dipirona,
     dosagem: "500mg",
+    href: "/Dipirona",
   },
   {
     id: 3,
     nome: "Ibuprofeno",
-    imagem: paracetamol,
+    imagem: ibuprofeno,
     dosagem: "500mg",
+    href: "/Ibuprofeno",
   },
   {
     id: 4,
     nome: "Dorflex",
-    imagem: paracetamol,
+    imagem: dorflex,
     dosagem: "500mg",
+    href: "/Dorflex",
   },
   {
     id: 5,
     nome: "Doril",
-    imagem: paracetamol,
+    imagem: doril,
     dosagem: "500mg",
+    href: "/Doril",
   },
   {
     id: 6,
     nome: "Novalgina",
-    imagem: paracetamol,
+    imagem: novalgina,
     dosagem: "500mg",
+    href: "/Novalgina",
   },
   {
     id: 7,
     nome: "Buscopan",
-    imagem: paracetamol,
+    imagem: buscopan,
     dosagem: "500mg",
-  },
-  {
-    id: 8,
-    nome: "Omeprazol",
-    imagem: paracetamol,
-    dosagem: "500mg",
-  },
-  {
-    id: 9,
-    nome: "Ranitidina",
-    imagem: paracetamol,
-    dosagem: "500mg",
-  },
-  {
-    id: 10,
-    nome: "Dorflex",
-    imagem: paracetamol,
-    dosagem: "500mg",
-  },
-  {
-    id: 11,
-    nome: "Doril",
-    imagem: paracetamol,
-    dosagem: "500mg",
+    href: "/Buscopan",
   }
 ];
 
@@ -121,7 +112,6 @@ export default function PaginaInicial() {
 
   return (
     <div className="paginaInicial">
-      <Navbar />
       <div className="buttons conteudo">
         <Button variant="light" className="button-nav">
           <div className="icon">
@@ -200,6 +190,7 @@ export default function PaginaInicial() {
                 imagem={medicamento.imagem}
                 dosagem={medicamento.dosagem}
                 className={`card_medicamento ${animating ? "animating" : ""}`}
+                href={medicamento.href}
               />
             ))}
           </div>

@@ -1,0 +1,67 @@
+.img{
+    width: 470px;
+    height: 563px;
+    border: solid 1px #000000;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.img img{
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+}
+
+.conteudo-medicamento{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.container-descricao{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    padding-left: 30px;
+}
+
+.descricao, .composicao, .conteudo-descricao, .uso{
+    text-align: start;
+}
+
+.conteudo-descricao h3{
+    padding-top: 20px;
+    text-transform: uppercase;
+    font-size: 23px;
+}
+
+.container-descricao h1{
+    font-size: 50px;
+    color: #2F4A3D;
+}
+
+.conteudo-descricao h2{
+    font-size: 25px;
+}
+
+.conteudo-descricao h5{
+    font-size: 24px;
+}
+
+.medicamento{
+    height: 100%;
+    padding-top: 100px;
+}
+
+ul li, .composicao h2{
+    font-weight: bold;
+}
+
+.descricao h2, .composicao h2 {
+    color: #2F4A3D;
+}

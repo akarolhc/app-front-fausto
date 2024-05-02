@@ -96,3 +96,15 @@ nav ul li a:hover{
     text-decoration: none;
     font-size: 1rem;
 }
+
+.dropdown-button{
+    color: var(--primary-color) !important;
+    text-decoration: none !important;
+    background-color: var(--third-color) !important;
+    border: none !important;
+    font-size: 1.2rem !important;
+    font-weight: 700 !important;
+}
+.dropdown-button:hover{
+    color: var(--hover-color) !important;
+}
