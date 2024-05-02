@@ -2,11 +2,12 @@ import "../styles/Contato.css";
 import Button from 'react-bootstrap/Button';
 import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import Dropdown from 'react-bootstrap/Dropdown';
+import Navbar from "../components/Navbar";
 
 export default function PaginaInicial(){
     return(
-        <div>
-            <div className="Nav"></div>
+        <div style={{display: 'flex', flexDirection: 'column', width: '100%', marginTop: '6.4%'}}>
+             <Navbar />
             <div className='Titulo'>
                 <h2>Agendamento de Remédios</h2>
             </div>

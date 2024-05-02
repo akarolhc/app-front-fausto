@@ -8,6 +8,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Medicamento from "./components/Medicamento";
 import Navbar from "./components/Navbar";
+import Agendamento from "./routes/Agendamento";
 
 import paracetamol from "./assets/paracetamol.png";
 import dorflex from "./assets/medicamentos/Dorflex.jpg";
@@ -121,6 +122,15 @@ const router = createBrowserRouter([
       fabricante={"Sanofi"}
       forma={"Comprimido"}
       tipoMedicamento={"Analgésico"} />
+  },
+  {
+    path: "/Medicamentos",
+    element: <BuscaMedicamento />,
+  },
+  {
+    path: "/Agendamento",
+    element: <Agendamento />,
+  
   }
 ]);
 

@@ -19,10 +19,11 @@ export default function Navbar() {
                 <li>
                     <Dropdown>
                         <Dropdown.Toggle className="dropdown-button" id="dropdown-basic">
-                            <a>Dropdown Button</a>
+                            <a>Medicamentos</a>
                         </Dropdown.Toggle>
 
                         <Dropdown.Menu>
+                            <Dropdown.Item href="/Medicamentos">Buscar</Dropdown.Item>
                             <Dropdown.Item href="/Paracetamol">Paracetamol</Dropdown.Item>
                             <Dropdown.Item href="/Dipirona">Dipirona</Dropdown.Item>
                             <Dropdown.Item href="/Ibuprofeno">Ibuprofeno</Dropdown.Item>
