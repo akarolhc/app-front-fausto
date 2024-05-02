@@ -3,6 +3,7 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import PaginaInicial from "./routes/PaginaInicial";
+import BuscaMedicamento from "./routes/BuscaMedicamento";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Medicamento from "./components/Medicamento";
