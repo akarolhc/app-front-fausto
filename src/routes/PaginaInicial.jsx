@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import "../styles/PaginaInicial.css";
 import CardFarmacia from "../components/CardFarmacia";
 import catarinense from "../assets/catarinense.png";
@@ -15,65 +16,100 @@ import AutoAwesomeMotionIcon from "@mui/icons-material/AutoAwesomeMotion";
 import paracetamol from "../assets/paracetamol.png";
 import CardMedicamento from "../components/CardMedicamento";
 
+import dipirona from "../assets/medicamentos/Dipirona.jpg";
+import ibuprofeno from "../assets/medicamentos/Ibuprofeno.png";
+import dorflex from "../assets/medicamentos/Dorflex.jpg";
+import doril from "../assets/medicamentos/Doril.jpg";
+import novalgina from "../assets/medicamentos/Novalgina.png";
+import buscopan from "../assets/medicamentos/Buscopan.jpg";
+
+
 const medicamentos = [
   {
+    id: 1,
     nome: "Paracetamol",
     imagem: paracetamol,
     dosagem: "500mg",
+    href: "/Paracetamol",
   },
   {
+    id: 2,
     nome: "Dipirona",
-    imagem: paracetamol,
+    imagem: dipirona,
     dosagem: "500mg",
+    href: "/Dipirona",
   },
   {
+    id: 3,
     nome: "Ibuprofeno",
-    imagem: paracetamol,
+    imagem: ibuprofeno,
     dosagem: "500mg",
+    href: "/Ibuprofeno",
   },
   {
+    id: 4,
     nome: "Dorflex",
-    imagem: paracetamol,
+    imagem: dorflex,
     dosagem: "500mg",
+    href: "/Dorflex",
   },
   {
+    id: 5,
     nome: "Doril",
-    imagem: paracetamol,
+    imagem: doril,
     dosagem: "500mg",
+    href: "/Doril",
   },
   {
+    id: 6,
     nome: "Novalgina",
-    imagem: paracetamol,
+    imagem: novalgina,
     dosagem: "500mg",
+    href: "/Novalgina",
   },
   {
+    id: 7,
     nome: "Buscopan",
-    imagem: paracetamol,
+    imagem: buscopan,
     dosagem: "500mg",
-  },
-  {
-    nome: "Omeprazol",
-    imagem: paracetamol,
-    dosagem: "500mg",
-  },
-  {
-    nome: "Ranitidina",
-    imagem: paracetamol,
-    dosagem: "500mg",
-  },
-  {
-    nome: "Dorflex",
-    imagem: paracetamol,
-    dosagem: "500mg",
-  },
-  {
-    nome: "Doril",
-    imagem: paracetamol,
-    dosagem: "500mg",
+    href: "/Buscopan",
   }
 ];
 
 export default function PaginaInicial() {
+
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [animating, setAnimating] = useState(false);
+
+  const goToNextSlide = () => {
+    if (currentSlide < medicamentos.length - 2) {
+      setCurrentSlide(currentSlide + 1);
+    }
+
+    setAnimating(true);
+
+    setTimeout(() => {
+      setAnimating(false);
+    }
+    , 500);
+
+  }
+
+  const goToPrevSlide = () => {
+    if (currentSlide > 0) {
+      setCurrentSlide(currentSlide - 1);
+    }
+
+    setAnimating(true);
+
+    setTimeout(() => {
+      setAnimating(false);
+    }
+    , 500);
+  }
+  
+
+
   return (
     <div className="paginaInicial">
       <div className="buttons conteudo">
@@ -141,23 +177,28 @@ export default function PaginaInicial() {
             <Button
               variant="light"
               style={{ background: "var(--secundary-color)" }}
+              onClick={goToPrevSlide}
             >
               <ChevronLeftIcon style={{ color: "var(--primary-color)" }} />
             </Button>
           </div>
           <div className="medicamentos">
-            {medicamentos.map((medicamento) => (
+            {medicamentos.slice(currentSlide, currentSlide + 4).map((medicamento) => (
               <CardMedicamento
-                imagem={medicamento.imagem}
+                key={medicamento.id}
                 nome={medicamento.nome}
+                imagem={medicamento.imagem}
                 dosagem={medicamento.dosagem}
+                className={`card_medicamento ${animating ? "animating" : ""}`}
+                href={medicamento.href}
               />
             ))}
           </div>
           <div className="button-left">
             <Button
               variant="light"
-              style={{ background: "var(--secundary-color)" }}
+              style={{ background: "var(--secundary-color)"}}
+              onClick={goToNextSlide}
             >
               <ChevronRightIcon style={{ color: "var(--primary-color)" }} />
             </Button>
