@@ -1,11 +1,11 @@
 import React from "react";
-import "../styles/Navbar.css";
+import "../styles/Header.css";
 import pills from "../assets/pills.png";
 import medtec from "../assets/MedTec.png";
 import SearchIcon from "@mui/icons-material/Search";
 import Dropdown from 'react-bootstrap/Dropdown';
 
-export default function Navbar() {
+export default function Header() {
     return (
         <nav>
             <ul>
@@ -24,13 +24,7 @@ export default function Navbar() {
 
                         <Dropdown.Menu>
                             <Dropdown.Item href="/Medicamentos">Buscar</Dropdown.Item>
-                            <Dropdown.Item href="/Paracetamol">Paracetamol</Dropdown.Item>
-                            <Dropdown.Item href="/Dipirona">Dipirona</Dropdown.Item>
-                            <Dropdown.Item href="/Ibuprofeno">Ibuprofeno</Dropdown.Item>
-                            <Dropdown.Item href="/Dorflex">Dorflex</Dropdown.Item>
-                            <Dropdown.Item href="/Doril">Doril</Dropdown.Item>
-                            <Dropdown.Item href="/Novalgina">Novalgina</Dropdown.Item>
-                            <Dropdown.Item href="/Buscopan">Buscopan</Dropdown.Item>
+                            <Dropdown.Item href="/CadastroMedicamentos">Cadastrar</Dropdown.Item>   
                         </Dropdown.Menu>
                     </Dropdown>
                 </li>
