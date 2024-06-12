@@ -1,9 +1,9 @@
-nav{
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1rem 4rem;
-    background-color: var(--third-color);
+    background-color: var(--bg-neutro);
     color: var(--primary-color);
     font-size: 1.2rem;
     font-weight: 700;
@@ -14,17 +14,17 @@ nav{
     margin: 0;
 }
 
-nav a{
+nav a {
     color: var(--primary-color);
     text-decoration: none;
     text-transform: uppercase;
 }
 
-nav a:hover{
+nav a:hover {
     color: var(--hover-color);
 }
 
-nav ul{
+nav ul {
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -32,56 +32,28 @@ nav ul{
     margin-bottom: 0 !important;
 }
 
-nav ul li{
+nav ul li {
     margin: 0 1rem;
 }
 
-nav ul li a{
+nav ul li a {
     color: var(--primary-color);
     text-decoration: none;
 }
 
-nav ul li a:hover{
+nav ul li a:hover {
     color: var(--hover-color);
 }
 
-.buttons-nav{
+.buttons-nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
     flex-direction: row;
     width: 30%;
 }
-.pesquisa{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 60%;
-}
-.pesquisa input{
-    width: 100%;
-    height: 2rem;
-    border-radius: 10px 0 0 10px;
-    border: none;
-    padding: 0 1rem;
-    font-size: 1rem;
-    color: #000;
-}
 
-.pesquisa button{
-    width: 3rem;
-    height: 2rem;
-    border-radius: 0 10px 10px 0;
-    border: none;
-    background-color: var(--secundary-color);
-    color: var(--primary-color);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-}
-
-.login{
+.signup {
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -91,20 +63,13 @@ nav ul li a:hover{
     padding: 0.2rem 0.5rem;
 }
 
-.login a{
-    color: var(--secundary-color);
+.user {
+    color: black;
     text-decoration: none;
     font-size: 1rem;
 }
 
-.dropdown-button{
-    color: var(--primary-color) !important;
-    text-decoration: none !important;
-    background-color: var(--third-color) !important;
-    border: none !important;
-    font-size: 1.2rem !important;
-    font-weight: 700 !important;
-}
-.dropdown-button:hover{
-    color: var(--hover-color) !important;
+.camera-icon img {
+    width: 60px;
+    height: 60px;
 }

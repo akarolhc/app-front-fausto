@@ -5,12 +5,9 @@
 }
 :root {
   --primary-color: #ffffff;
-  --secundary-color: #2f4a3d;
-  --second-color: #48735f;
-  --third-color: #5f967c;
-  --hover-color: #7cc4a2;
-  --light-color: #95edc4;
+  --hover-color: #F5DEB3;
   --font-color: #000000;
+  --bg-neutro: #8B4513;
 }
 body {
   margin: 0;
@@ -19,6 +16,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #F5DEB3 !important;
 }
 
 code {

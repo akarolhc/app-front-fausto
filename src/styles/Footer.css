@@ -1,5 +1,6 @@
 footer {
-    background-color: var(--third-color);
+    background-color: var(--bg-neutro);
+    position: fixed;
     color: white;
     text-align: center;
     padding: 18px 0;
@@ -8,25 +9,16 @@ footer {
     z-index: 100;
 }
 
-.infos {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-
 .footer-bottom {
     color: white;
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    height: 50px;
+    height: 30px;
     z-index: 100;
     display: flex;
     justify-content: space-around;
     align-items: center;
-    border-top: 1px solid var(--secundary-color);
 }
 
 .licensa{
